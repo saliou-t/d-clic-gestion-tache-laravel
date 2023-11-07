@@ -19,4 +19,10 @@ Route::get('/', function () {
 });
 
 
+
+// Route::get('/taches', function () {
+//     return view('taches.taches');
+// });
+
+
 Route::get('/taches', [TacheController::class, 'getListeTaches']);

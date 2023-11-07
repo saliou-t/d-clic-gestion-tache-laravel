@@ -2,22 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tache;
 use Illuminate\Http\Request;
 
 class TacheController extends Controller
 {
     public function getListeTaches(){
 
-      //essayer de récupérer la liste des taches depuis la bdd
+      $taches = Tache::all();
+    
 
-
-      //RECHERCHES A FAIRE
-
-      $taches = .....
-
-
-
-
-        return view('tache.taches', ["taches"=>$tache]);
+    return view('tache.taches', ["taches"=>$taches]);
     }
 }
