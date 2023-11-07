@@ -5,6 +5,9 @@
             <h1 class="my-5">
                 Liste des taches
             </h1>
+            @foreach($donnees as $donnee)
+                {{$donnee}} <br>
+            @endforeach
         </div>
     </div>
 
