@@ -20,10 +20,13 @@ class TacheController extends Controller
 
     public function show(Request $req){
 
-      $tache = Tache::find($req->id_tache);
+      $tache = Tache::findOrFail($req->id_tache);
+      
 
       return view('tache.show',
-        ['tacheTrouvee'=>$tache]      
+        [
+          'tacheTrouvee'=>$tache,
+        ]      
      );
     }
 }

@@ -12,7 +12,18 @@
         <div class="card-body">
           <h5 class="card-title">Priorité : {{$tacheTrouvee->priorite}}</h5>
           <p class="card-text">{{$tacheTrouvee->description_tache}}</p>
-          <a href="#" class="btn btn-primary">Terminer</a>
+          <p class="card-text"> Status :
+            @if($tacheTrouvee->is_termine ==1)
+                Terminée
+            @else
+                En cours
+              <br>  <a href="#" class="btn btn-primary">Terminer</a>
+            @endif
+        </p>
+
+        {{-- {{ $tacheTrouvee->is_termine ==1 ? 'Terminé' : 'En co' }} --}}
+
+
         </div>
       </div>
 </div>
