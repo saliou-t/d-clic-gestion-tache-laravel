@@ -18,9 +18,9 @@
                         <div class="card-body">
                             <h5 class="card-title"> {{ $tache->nom_tache }} </h5>
                             <h6 class="card-subtitle mb-2 text-muted">Priorité : {{$tache->priorite}}</h6>
-                            <p class="card-text">{{$tache->description_tache}}</p>
+                            {{-- <p class="card-text">{{$tache->description_tache}}</p> --}}
                             <a href="#" class="card-link">supprimer</a>
-                            <a href="#" class="card-link">details</a>
+                            <a href="/tache/{{$tache->id}}/details" class="card-link">details</a>
                         </div>
                     </div>
                 </div>

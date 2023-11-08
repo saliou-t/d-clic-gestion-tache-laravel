@@ -13,5 +13,17 @@ class TacheController extends Controller
     
 
     return view('tache.taches', ["taches"=>$taches]);
+
+    // return view('tache.taches', compact('taches') );
+
+    }
+
+    public function show(Request $req){
+
+      $tache = Tache::find($req->id_tache);
+
+      return view('tache.show',
+        ['tacheTrouvee'=>$tache]      
+     );
     }
 }

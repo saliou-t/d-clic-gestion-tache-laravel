@@ -25,4 +25,7 @@ Route::get('/', function () {
 // });
 
 
+Route::get('/tache/{id_tache}/details', [TacheController::class, 'show']);
+
+
 Route::get('/taches', [TacheController::class, 'getListeTaches']);
