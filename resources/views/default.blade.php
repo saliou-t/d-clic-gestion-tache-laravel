@@ -25,7 +25,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Nouvelle</a>
+                        <a class="nav-link" href="/tache/nouveau">Nouvelle</a>
                     </li>
                 </ul>
                 <form class="d-flex">

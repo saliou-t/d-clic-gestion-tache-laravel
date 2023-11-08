@@ -31,4 +31,11 @@ Route::get('/tache/{id_tache}/details', [TacheController::class, 'show'])->name(
 Route::get('/taches', [TacheController::class, 'getListeTaches']);
 
 
+Route::get('/tache/nouveau', [TacheController::class, 'create']);
+
+
+Route::post('/tache/save', [TacheController::class, 'save']);
+
+
 Route::get('/tache/termine/{id_tache}', [TacheController::class, 'termine']);
+
