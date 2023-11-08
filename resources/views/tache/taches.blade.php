@@ -16,7 +16,17 @@
                 <div class="col-12 col-md-4 my-1">
                     <div class="card mx-5" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title"> {{ $tache->nom_tache }} </h5>
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <h5 class="card-title"> {{ $tache->nom_tache }} </h5>
+
+                                </div>
+                                <div class="col-12 col-md-6 text-end">
+                                    
+                                    <h5 class="card-title"> {{ $tache->is_termine ? 'Terminée' : 'En cours' }} </h5>
+                                </div>
+                            </div>
+
                             <h6 class="card-subtitle mb-2 text-muted">Priorité : {{$tache->priorite}}</h6>
                             {{-- <p class="card-text">{{$tache->description_tache}}</p> --}}
                             <a href="#" class="card-link">supprimer</a>

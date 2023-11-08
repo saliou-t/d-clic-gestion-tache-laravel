@@ -12,7 +12,7 @@ class TacheController extends Controller
       $taches = Tache::all();
     
 
-    return view('tache.taches', ["taches"=>$taches]);
+      return view('tache.taches', ["taches"=>$taches]);
 
     // return view('tache.taches', compact('taches') );
 
@@ -28,5 +28,20 @@ class TacheController extends Controller
           'tacheTrouvee'=>$tache,
         ]      
      );
+    }
+
+    public function termine(Request $req){
+      
+      $tache = Tache::findOrFail($req->id_tache); //on essaie de récupérer la tache en question
+      
+      // dd($tache->is_termine);
+      
+      $tache->is_termine = 1; //on modifie le status a terminé(en l'affectant la valeur 1)
+
+      $tache->save(); //on applique ma mise a jour dans notre BDD
+
+
+      return back(); //maintenant, on fait une petite redirection vers la page show
+
     }
 }
